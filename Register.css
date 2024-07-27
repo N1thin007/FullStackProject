@@ -1,0 +1,117 @@
+.register-body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 100vh;
+    background-color: #d8c9c951;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-left-image, .register-right-image {
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    z-index: -1;
+    width: auto;
+    height: 100%; 
+}
+
+.register-left-image {
+    left: 0;
+    margin-left: 20px;
+}
+
+.register-right-image {
+    right: 0;
+    margin-right: 0; 
+    width: 50%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.register-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 1;
+    background: white; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    margin-left: 0; 
+    margin-right: auto; 
+    left: 10%; 
+}
+
+.register-wrapper h2 {
+    margin: 0;
+    font-size: 34px;
+    color: #000000;
+}
+
+.register-wrapper p {
+    font-size: 24px;
+    color: #666666a8;
+    margin-left: 05px;
+
+}
+
+.register-form-group {
+    margin-bottom: 20px;
+}
+
+.register-form-group input[type="text"],
+.register-form-group input[type="password"],
+.register-form-group input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 350px;
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #0073e6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-button:hover {
+    background-color: #005bb5;
+}
+
+.register-divider {
+    border-bottom: 2px solid #ceb0b0;
+    margin: 20px 0;
+}
+
+.register-signup-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-signup-link {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.register-signup-link:hover {
+    text-decoration: underline;
+}

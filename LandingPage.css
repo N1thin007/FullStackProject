@@ -1,0 +1,119 @@
+.landing-body {
+    font-family: Arial, sans-serif;
+    background-color: #d8c9c951;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+.landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffffab;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.landing-logo {
+    max-height: 40px; 
+    margin-right: auto;
+}
+
+.landing-header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.landing-header button {
+    background-color: #9b0b93;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.landing-header button:hover {
+    background-color: aliceblue;
+    color: #9b0b93;
+    border-color: #9b0b93;
+}
+
+.landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.landing-content {
+    max-width: 50%;
+    flex: 1 1 50%;
+    box-sizing: border-box;
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    color: #000000; 
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #41474d68;
+}
+
+.landing-content input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.landing-content button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #9b0b93; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.landing-content button:hover {
+    background-color: #c25ebd;
+}
+
+.landing-image {
+    max-width: 40%;
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}

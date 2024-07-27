@@ -1,0 +1,196 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calendar-container {
+    display: flex;
+    height: 100vh;
+}
+
+.calendar-sidebar {
+    width: 250px;
+    background-color: #f0f4f8;
+    color: #4a4a4a;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: width 0.3s ease;
+}
+
+.calendar-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-user-icon {
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.calendar-user-icon:hover {
+    background-color: #82c4e8;
+}
+
+.calendar-user-info {
+    flex-grow: 1;
+}
+
+.calendar-user-email {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.calendar-logout-button {
+    background-color: #ababab;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-logout-button:hover {
+    background-color: #8d8d8d;
+}
+
+.calendar-nav-button {
+    width: 100%;
+    background-color: #6c757d;
+    color: #ecf0f1;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.calendar-nav-button .icon {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.calendar-nav-button.active,
+.calendar-nav-button:hover {
+    background-color: #5bc0de;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-main-content {
+    flex-grow: 1;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease;
+    background-color: #ffffff;
+}
+
+.calendar-task-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.calendar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.calendar-modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.calendar-modal-content h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+    border-bottom: 2px solid #5bc0de;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.calendar-modal-content input,
+.calendar-modal-content textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.calendar-modal-content input[type="datetime-local"] {
+    padding: 8px;
+}
+
+.calendar-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-modal-buttons button {
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-modal-buttons button:hover {
+    background-color: #46b8da;
+}
+
+.calendar-modal-buttons button:last-child {
+    background-color: #d9534f;
+}
+
+.calendar-modal-buttons button:last-child:hover {
+    background-color: #c9302c;
+}
