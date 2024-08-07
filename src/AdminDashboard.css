@@ -1,0 +1,127 @@
+.nob{
+    background-color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px; /* Set a small padding bottom */
+    min-height: calc(100vh - 20px); /* Fill the remaining height of the viewport */
+    overflow: hidden; /* Hide overflow if necessary */
+}
+
+.dashboard-container {
+    display: flex;
+    background-color: #000000;
+    flex-direction: column; /* Change to column to stack sidebar on top */
+    min-height: 100vh; /* Full height for the dashboard */
+}
+
+.dashboard-header {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    background-color: #1a1a1a; /* Dark header background */
+    padding: 10px 20px; /* Padding for header */
+    color: #ffffff; /* White text color */
+}
+
+.sidebar-title {
+    font-size: 1.5rem; /* Title size */
+}
+
+.notes-nav-button {
+    background-color: #333333; /* Button background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px;
+    margin-left: 10px; /* Space between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.notes-nav-button:hover {
+    background-color: #444444; /* Darker on hover */
+}
+
+.dashboard-main-content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    margin-left: 30px;
+    border-radius: 20px;
+    width: 1340px;
+    background-color: #2c2c2c; /* Main content background */
+    color: #ffffff; /* White text color */
+}
+
+.content-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.add-user-form {
+    margin-bottom: 20px; /* Space below the form */
+}
+
+.add-user-form input,
+.add-user-form select {
+    width: 1315px; /* Full width */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #444444; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #333333; /* Input background */
+    color: #ffffff; /* Input text color */
+}
+
+.add-button {
+    background-color: #007bff; /* Button color */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+    margin-bottom: 20px;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #444444; /* Table border */
+    padding: 10px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #333333; /* Header background */
+}
+
+.delete-button {
+    background-color: #e74c3c; /* Delete button color */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #c0392b; /* Darker on hover */
+}
+
+.edit-button {
+    background-color: #f39c12; /* Edit button color */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px; /* Space between buttons */
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #e67e22; /* Darker on hover */
+}

@@ -1,0 +1,212 @@
+.login-section {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.login-signup-text {
+    color: rgb(0, 0, 0);
+    margin-left: 150px;
+}
+
+.login-container {
+    margin-top: 90px;
+    margin-bottom: 150px;
+    margin-left: 90px;
+    width: 601px;
+    max-width: 6500px;
+    background-color: #fefefe;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.login-subtitle {
+    font-size: 1.125rem;
+    color: #757474;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.login-form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.login-form-input:focus {
+    border-color: #444444;
+    outline: none;
+}
+
+.login-form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-form-checkbox {
+    margin-right: 0.5rem;
+}
+
+.login-form-check-label {
+    font-size: 0.875rem;
+    color: #cccccc;
+}
+
+.login-form-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.login-form-button:hover {
+    background-color: #0056b3;
+}
+
+.login-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.login-footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.login-footer-link {
+    font-size: 0.875rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-footer-link:hover {
+    color: #0056b3;
+}
+
+.login-social-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-social-button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 48%;
+    margin-bottom: 1rem;
+    transition: opacity 0.3s;
+}
+
+.login-social-button:hover {
+    opacity: 0.8;
+}
+
+.login-google-button {
+    background-color: #000000;
+    color: #fffefe;
+}
+
+.login-apple-button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.login-twitter-button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.login-apple-button img {
+    height: 48px;
+    width: 40px;
+}
+
+@media (min-width: 1024px) {
+    .login-section {
+        justify-content: space-between;
+    }
+
+    .login-image {
+        margin-left: 200px;
+        display: block;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 65px;
+    }
+}
+
+.login-signup-text .login-link {
+    color: #37689d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #0056b3;
+}

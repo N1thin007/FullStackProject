@@ -1,0 +1,50 @@
+/* Add this style for the active button */
+.app-nav-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+/* Rest of your styles */
+.app-header {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #262626;
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.app-header-title {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.app-header-navigation {
+    display: flex;
+    gap: 12px;
+}
+
+.app-nav-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.app-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-logout-btn {
+    background-color: #dc3545;
+}
+
+.app-logout-btn:hover {
+    background-color: #c82333;
+}

@@ -1,0 +1,208 @@
+/* AIScheduler.css */
+
+.Vb {
+  background-color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px; /* Set a small padding bottom */
+    min-height: calc(100vh - 20px); /* Fill the remaining height of the viewport */
+    overflow: hidden; /* Hide overflow if necessary */
+}
+
+
+.ai-container {
+  flex-grow: 1; /* Flex container to grow and fill available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #000000; /* Consistent dark background */
+}
+
+.ai-content {
+  background-color: #1c1c1c; /* Slightly lighter background for content area */
+  border-radius: 12px; /* Rounded corners */
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for a floating effect */
+  width: 100%;
+  max-width: 1000px; /* Increased max-width for larger screens */
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 36px; /* Larger heading */
+  color: #ffffff; /* Bright white for headings */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ai-prompt-container {
+  margin-bottom: 30px;
+}
+
+.ai-prompt-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
+}
+
+.ai-prompt-input {
+  width: 100%;
+  min-height: 120px; /* Adequate height for textarea */
+  padding: 15px;
+  border: 1px solid #444; /* Dark border for the input */
+  border-radius: 8px;
+  background-color: #2a2a2a; /* Darker background for input */
+  color: #e0e0e0; /* Light text color */
+  font-size: 16px;
+  resize: none; /* Prevent resizing */
+  margin-bottom: 20px; /* Spacing below textarea */
+}
+
+.ai-mic-button,
+.ai-generate-button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 8px; /* Spacing around buttons */
+  display: inline-block; /* Allow centering */
+}
+
+.ai-mic-button {
+  background-color: #4caf50; /* Green background */
+  color: #ffffff; /* White text */
+}
+
+.ai-mic-button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+.ai-generate-button {
+  background-color: #2196f3; /* Blue background */
+  color: #ffffff; /* White text */
+}
+
+.ai-generate-button:hover {
+  background-color: #0b7dda; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+.ai-response {
+  width: 100%;
+  text-align: center; /* Center-align the response section */
+}
+
+h2{
+  color: white;
+}
+
+.ai-response-table {
+  width: 100%;
+  border-collapse: collapse; /* Merge table borders */
+  margin-top: 30px;
+}
+
+.ai-response-table th,
+.ai-response-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #444; /* Dark border for rows */
+}
+
+.ai-response-table th {
+  background-color: #00796b; /* Teal background for header */
+  color: #ffffff; /* White text */
+  font-weight: 600; /* Bold header text */
+}
+
+.ai-response-table tr:nth-child(even) {
+  background-color: #1f1f1f; /* Slightly lighter dark background for even rows */
+  color: #ffffff; /* White text on hover */
+}
+
+.ai-response-table tr:nth-child(odd) {
+  background-color: #535353; /* Slightly lighter dark background for even rows */
+  color: #ffffff; /* White text on hover */
+}
+
+.ai-response-table tr:hover {
+  background-color: #b5b5b5; /* Darker teal on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.approve-all-button {
+  background-color: #4caf50; /* Green background for approve button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px; /* Space above the button */
+  font-size: 16px;
+  display: inline-block; /* Allow centering */
+}
+
+.approve-all-button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Add styles for the Decline All button */
+.decline-all-button {
+  background-color: #f44336; /* Red background for decline button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px; /* Space above the button */
+  font-size: 16px;
+  margin-left: 10px;
+  display: inline-block; /* Allow centering */
+}
+
+.decline-all-button:hover {
+  background-color: #c62828; /* Darker red on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Editable cell styles */
+.ai-response-table td input[type="text"],
+.ai-response-table td input[type="datetime-local"],
+.ai-response-table td textarea {
+  width: 100%; /* Full width for the input elements */
+  padding: 10px; /* Padding inside the input */
+  border: 1px solid #555; /* Dark border for inputs */
+  border-radius: 4px; /* Rounded corners for inputs */
+  background-color: #2a2a2a; /* Darker background for inputs */
+  color: #e0e0e0; /* Light text color */
+  font-size: 14px; /* Font size for inputs */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.ai-response-table td input[type="text"]:focus,
+.ai-response-table td input[type="datetime-local"]:focus,
+.ai-response-table td textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: #2196f3; /* Blue border on focus */
+  background-color: #1f1f1f; /* Slightly lighter background on focus */
+}
+
+.ai-response-table td textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+  min-height: 60px; /* Minimum height for textarea */
+}
+
+/* Editable cell hover effect */
+
+
+.ai-response-table td input[type="text"]::placeholder,
+.ai-response-table td input[type="datetime-local"]::placeholder,
+.ai-response-table td textarea::placeholder {
+  color: #777; /* Placeholder text color */
+}

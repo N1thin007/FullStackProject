@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    padding: 32px 24px 24px; 
+    border-radius: 8px;
+    text-align: center;
+    max-width: 352px; 
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-family: "Inter", sans-serif; 
+}
+
+.modal-content h2 {
+    font-weight: 900; 
+    font-size: 2.5rem;
+    color: #000; 
+    margin: 10px 0; 
+}
+.modal-content p {
+    color: #514f4fb3;   
+    margin-bottom: 30px;
+}
+.modal-overlay.open .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-family: "Inter", sans-serif; 
+}
+
+.modal-button.google {
+    background-color: #4285f4;
+    color: white;
+}
+
+.modal-button.apple {
+    background-color: #000;
+    color: white;
+}
+
+.modal-button.email {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.modal-button:hover {
+    transform: scale(1.05); 
+}
+
+.modal-footer {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal-footer a:hover {
+    text-decoration: underline;
+}
+
+.modal-input {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+}
+
+.modal-button.signin {
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+}
+
+.success-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0c69ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 1001;
+    opacity: 0;
+    animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}

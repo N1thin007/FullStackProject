@@ -1,0 +1,158 @@
+.dashboard {
+    padding: 40px 20px;
+    background-color: #000000; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative; 
+}
+
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff; 
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.dashboard-card {
+    background: #1a1a1a; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden;
+}
+
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff; 
+}
+
+.dashboard-card p {
+    font-size: 1rem;
+    color: #cccccc; 
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.dashboard-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px; 
+    background-color: #ffffff; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease; 
+}
+
+.dashboard-card:hover::after {
+    transform: scaleX(1);
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+    gap: 20px; 
+    max-height: 400px; /* Adjust height to fit the layout */
+    height: 900px;
+}
+
+.tasks-section {
+    padding: 20px;
+    background: #1a1a1a; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease; 
+    animation: fadeIn 0.5s ease; 
+    flex: 1; 
+}
+
+.tasks-section:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tasks-title {
+    font-size: 2rem;
+    color: #ffffff; 
+    margin-bottom: 20px;
+}
+
+.tasks-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    font-size: 1rem;
+    color: #ffffff; 
+    padding: 10px 0;
+    border-bottom: 1px solid #333; 
+    transition: background 0.3s ease;
+}
+
+.task-item:last-child {
+    border-bottom: none; 
+}
+
+.task-item:hover {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 4px;
+}
+
+.important-tasks{
+    background: linear-gradient(180deg, rgb(79, 72, 80) 0%, rgb(96, 96, 146) 100%);
+    border-radius: 12px; /* Consistent border radius */
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-height: 900px; /* Set max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.todays-tasks{
+    background: linear-gradient(180deg, rgb(79, 72, 80) 0%, rgb(96, 96, 146) 100%);
+    border-radius: 12px; /* Consistent border radius */
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-height: 200px; /* Set max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.desc {
+    color: white;
+    /* Remove scroll and max-height */
+}

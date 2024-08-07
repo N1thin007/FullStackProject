@@ -1,0 +1,190 @@
+/* Calendar.css */
+.mainaaa{
+    background-color: #000000;
+    padding-top: 10px;
+    color: #e0e0e0;
+    padding-bottom: 10px; /* Set a small padding bottom */
+    min-height: calc(100vh - 20px); /* Fill the remaining height of the viewport */
+    overflow: hidden; /* Hide overflow if necessary */
+}
+.calendar-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-view-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.calendar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.calendar-modal-content {
+    background: #2a2a2a;
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.calendar-modal-content h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.calendar-modal-content input,
+.calendar-modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.calendar-modal-content textarea {
+    resize: none;
+    height: 80px;
+}
+
+.calendar-modal-content input::placeholder,
+.calendar-modal-content textarea::placeholder {
+    color: #bbb;
+}
+
+.calendar-modal-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.calendar-modal-buttons button {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.calendar-modal-buttons button:hover {
+    background-color: #555;
+
+}
+
+.save-button {
+    order: 1;
+}
+
+.cancel-button {
+    order: 2;
+}
+
+.delete-button {
+    order: 3;
+}
+
+.fc {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+.fc-toolbar {
+    background-color: #333;
+    color: #fff;
+}
+
+.fc-toolbar button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.fc-toolbar button:hover {
+    color: #ef9011;
+}
+
+.fc-day {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.fc-day:hover {
+    background-color: #3a3a3a;
+    cursor: pointer;
+}
+
+.fc-event {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px 0;
+    text-align: center;
+}
+
+.fc-event:hover {
+    background-color: #555;
+}
+
+.fc-event.selected {
+    background-color: #ef9011;
+}
+
+@media screen and (max-width: 850px) {
+    .calendar-main-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .calendar-view-container {
+        width: 100%;
+    }
+}
+
+.calendar-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #027cff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0px 
+  
+  4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: popupFadeInOut 3s forwards;
+    font-family: 'Inter', sans-serif;
+    z-index: 1000;
+  }
+  
+  @keyframes popupFadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+  }

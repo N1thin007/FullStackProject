@@ -1,0 +1,95 @@
+/* src/HabitTracker.css */
+
+.habit-tracker-container {
+  background-color: #000000;
+  padding-top: 10px;
+  padding-bottom: 10px; /* Set a small padding bottom */
+  min-height: calc(100vh - 20px); /* Fill the remaining height of the viewport */
+  overflow: hidden;
+}
+
+.habit-tracker-content {
+  max-width: 1200px;
+  margin-top: 80px;
+  margin-left: 110px;
+  padding: 20px;
+  background-color: #121212; /* Deep black background */
+  color: #ffffff; /* White text for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.habit-tracker-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.habit-tracker-content input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.habit-tracker-content button {
+  padding: 10px 15px;
+  background-color: #00adb5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.habit-tracker-content button:hover {
+  background-color: #007e82;
+}
+
+.habit-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.habit-table th,
+.habit-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.habit-table th {
+  background-color: #00796b; /* Teal background for header */
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.habit-table tr:nth-child(even) {
+  background-color: #1f1f1f; /* Slightly lighter dark background for even rows */
+}
+
+.habit-table tr:hover {
+  background-color: #2a2a2a; /* Darker background on row hover */
+}
+
+.habit-table input[type="checkbox"] {
+  cursor: pointer;
+  transform: scale(1.5); /* Larger checkboxes */
+}
+
+.progress-container {
+  width: 50px; /* Fixed width for progress bar */
+  height: 50px; /* Fixed height for progress bar */
+  margin: 0 auto; /* Center the progress bar */
+}
+
+.stars-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.star-container {
+  font-size: 24px; /* Adjust star size */
+}
