@@ -35,7 +35,7 @@
 
 .habit-tracker-content button {
   padding: 10px 15px;
-  background-color: #00adb5;
+  background-color: #cc3838;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -44,7 +44,7 @@
 }
 
 .habit-tracker-content button:hover {
-  background-color: #007e82;
+  background-color: hsl(0, 0%, 48%);
 }
 
 .habit-table {
@@ -61,7 +61,7 @@
 }
 
 .habit-table th {
-  background-color: #00796b; /* Teal background for header */
+  background-color: #4e5050; /* Teal background for header */
   color: #ffffff;
   font-weight: 600;
 }

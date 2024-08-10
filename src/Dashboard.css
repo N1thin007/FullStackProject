@@ -123,7 +123,8 @@
 }
 
 .important-tasks{
-    background: linear-gradient(180deg, rgb(79, 72, 80) 0%, rgb(96, 96, 146) 100%);
+    /* background: linear-gradient(180deg, rgb(79, 72, 80) 0%, rgb(96, 96, 146) 100%); */
+    background-color: #373737  ;
     border-radius: 12px; /* Consistent border radius */
     padding: 20px; /* Add padding for better spacing */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -140,7 +141,6 @@
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -154,5 +154,38 @@
 
 .desc {
     color: white;
-    /* Remove scroll and max-height */
+}
+
+/* New styles for buttons */
+.logout-button {
+    margin-top: -25px;
+    background-color: #e74c3c; /* Red color for logout */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 60px; /* Space between logout and cards */
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.navigate-button {
+    background-color: #3498db; /* Blue color for navigation */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px; /* Space between navigation and cards */
+    transition: background-color 0.3s;
+}
+
+.navigate-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
 }

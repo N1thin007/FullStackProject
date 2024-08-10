@@ -9,7 +9,7 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
+// Example: After successful login
   const handleLogin = async (event) => {
     event.preventDefault();
 

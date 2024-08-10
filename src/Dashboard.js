@@ -11,12 +11,12 @@ const Dashboard = () => {
   const loggedInUser = localStorage.getItem('username'); // Get the logged-in username
 
   const cards = [
-    { title: 'Homepage', content: 'View your main dashboard here.', link: '/' },
     { title: 'Notes', content: 'Manage your notes and ideas.', link: '/notes' },
     { title: 'To-Do List', content: 'Track your tasks and deadlines.', link: '/todo' },
     { title: 'Calendar', content: 'View and schedule events.', link: '/calendar' },
     { title: 'Pomodoro Timer', content: 'Boost your productivity with time management.', link: '/timer' },
     { title: 'AI Scheduler', content: 'Automate your scheduling tasks.', link: '/ai' },
+    { title: 'Habit Tracker', content: 'Track your habits and progress.', link: '/habit' },
   ];
 
   useEffect(() => {
@@ -74,9 +74,17 @@ const Dashboard = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('username'); // Remove the username from local storage
+    setUserId(null); // Clear the userId state
+    navigate('/'); // Navigate to the login page
+  };
+
   return (
     <div className="dashboard">
       <h1 className="dashboard-title">Dashboard</h1>
+      <button className="logout-button" onClick={handleLogout}>Logout</button> {/* Logout button */}
+
       <div className="dashboard-cards">
         {cards.map((card, index) => (
           <div 

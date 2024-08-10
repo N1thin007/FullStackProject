@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ReactSlider from 'react-slider';
+import { FaPlay, FaPause } from 'react-icons/fa'; // Import play and pause icons
 import './Slider.css'; // Updated slider CSS
 import './Timer.css'; // Custom styles for the Centered Timer component
 import AppHeader from './AppHeader';
+import loftMusic from './lofi-music.mp3'; // Import your lofi music file
 
 const red = '#f54e4e';
 const green = '#4aec8c';
@@ -19,10 +21,12 @@ const Timer = () => {
   const [pomodoroCount, setPomodoroCount] = useState(1); // Number of Pomodoro sessions
   const [completedPomodoros, setCompletedPomodoros] = useState(0); // Completed Pomodoros
   const [taskName, setTaskName] = useState(''); // Task name
+  const [isPlaying, setIsPlaying] = useState(false); // State for music playback
 
   const secondsLeftRef = useRef(secondsLeft);
   const isPausedRef = useRef(isPaused);
   const modeRef = useRef(mode);
+  const audioRef = useRef(null); // Reference for the audio element
 
   useEffect(() => {
     // Set the initial timer when the component mounts or when the work/break minutes change
@@ -80,6 +84,16 @@ const Timer = () => {
   const minutes = Math.floor(secondsLeft / 60);
   let seconds = secondsLeft % 60;
   if (seconds < 10) seconds = '0' + seconds;
+
+  const handleMusicClick = () => {
+    if (isPlaying) {
+      audioRef.current.pause(); // Pause the music
+      audioRef.current.currentTime = 0; // Reset to the beginning
+    } else {
+      audioRef.current.play(); // Play the music
+    }
+    setIsPlaying(!isPlaying); // Toggle the playing state
+  };
 
   return (
     <div className='hehe'>
@@ -170,6 +184,17 @@ const Timer = () => {
         <div className="completed-pomodoros">
           <h3>Completed Pomodoros: {completedPomodoros}/{pomodoroCount}</h3>
         </div>
+      </div>
+
+      {/* Music Playback Button */}
+      <div className="music-controls">
+        <audio ref={audioRef} loop>
+          <source src={loftMusic} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <button className="music-button" onClick={handleMusicClick}>
+          {isPlaying ? <FaPause /> : <FaPlay />} {/* Use icons instead of text */}
+        </button>
       </div>
     </div>
   );

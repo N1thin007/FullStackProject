@@ -30,10 +30,17 @@ const Modal = ({ isOpen, onClose }) => {
 
       const result = await response.json();
       if (result.success) {
-        localStorage.setItem('username', username);
-        localStorage.setItem('role', result.role);
+        // Assume that the backend response contains the user's id, email, and role.
+        const { id, role, email } = result;
 
-        if (result.role === 'admin') {
+        // Save id, username, role, and email to local storage.
+        localStorage.setItem('userId', id);
+        localStorage.setItem('username', username);
+        localStorage.setItem('role', role);
+        localStorage.setItem('email', email);
+
+        // Navigate based on role.
+        if (role === 'admin') {
           navigate('/AdminDashboard');
         } else {
           navigate('/Dashboard');

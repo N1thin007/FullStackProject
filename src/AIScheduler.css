@@ -2,12 +2,11 @@
 
 .Vb {
   background-color: #000000;
-    padding-top: 10px;
-    padding-bottom: 10px; /* Set a small padding bottom */
-    min-height: calc(100vh - 20px); /* Fill the remaining height of the viewport */
-    overflow: hidden; /* Hide overflow if necessary */
+  padding-top: 10px;
+  padding-bottom: 10px; /* Set a small padding bottom */
+  min-height: calc(100vh - 20px); /* Fill the remaining height of the viewport */
+  overflow: hidden; /* Hide overflow if necessary */
 }
-
 
 .ai-container {
   flex-grow: 1; /* Flex container to grow and fill available space */
@@ -71,22 +70,22 @@ h1 {
 }
 
 .ai-mic-button {
-  background-color: #4caf50; /* Green background */
-  color: #ffffff; /* White text */
+  background-color: #4A4A4A; /* Dark grey background */
+  color: #e0e0e0; /* Light grey text */
 }
 
 .ai-mic-button:hover {
-  background-color: #388e3c; /* Darker green on hover */
+  background-color: #646464; /* Lighter grey on hover */
   transform: scale(1.05); /* Slight scale effect */
 }
 
 .ai-generate-button {
-  background-color: #2196f3; /* Blue background */
+  background-color: #d03737; /* Muted blue background */
   color: #ffffff; /* White text */
 }
 
 .ai-generate-button:hover {
-  background-color: #0b7dda; /* Darker blue on hover */
+  background-color: #b11111bd; /* Darker blue on hover */
   transform: scale(1.05); /* Slight scale effect */
 }
 
@@ -95,7 +94,7 @@ h1 {
   text-align: center; /* Center-align the response section */
 }
 
-h2{
+h2 {
   color: white;
 }
 
@@ -113,8 +112,8 @@ h2{
 }
 
 .ai-response-table th {
-  background-color: #00796b; /* Teal background for header */
-  color: #ffffff; /* White text */
+  background-color: #333333; /* Dark grey background for header */
+  color: #e0e0e0; /* Light grey text */
   font-weight: 600; /* Bold header text */
 }
 
@@ -124,17 +123,17 @@ h2{
 }
 
 .ai-response-table tr:nth-child(odd) {
-  background-color: #535353; /* Slightly lighter dark background for even rows */
+  background-color: #535353; /* Slightly lighter dark background for odd rows */
   color: #ffffff; /* White text on hover */
 }
 
 .ai-response-table tr:hover {
-  background-color: #b5b5b5; /* Darker teal on hover */
+  background-color: #646464; /* Darker grey on hover */
   color: #ffffff; /* White text on hover */
 }
 
 .approve-all-button {
-  background-color: #4caf50; /* Green background for approve button */
+  background-color: #388E3C; /* Dark green background for approve button */
   color: #ffffff; /* White text */
   border: none;
   border-radius: 8px;
@@ -147,13 +146,14 @@ h2{
 }
 
 .approve-all-button:hover {
-  background-color: #388e3c; /* Darker green on hover */
+  margin-right: 10px;
+  background-color: #2E7D32; /* Darker green on hover */
   transform: scale(1.05); /* Slight scale effect */
 }
 
 /* Add styles for the Decline All button */
 .decline-all-button {
-  background-color: #f44336; /* Red background for decline button */
+  background-color: #D32F2F; /* Dark red background for decline button */
   color: #ffffff; /* White text */
   border: none;
   border-radius: 8px;
@@ -162,12 +162,11 @@ h2{
   transition: all 0.3s ease;
   margin-top: 10px; /* Space above the button */
   font-size: 16px;
-  margin-left: 10px;
   display: inline-block; /* Allow centering */
 }
 
 .decline-all-button:hover {
-  background-color: #c62828; /* Darker red on hover */
+  background-color: #C62828; /* Darker red on hover */
   transform: scale(1.05); /* Slight scale effect */
 }
 
@@ -199,10 +198,23 @@ h2{
 }
 
 /* Editable cell hover effect */
-
-
 .ai-response-table td input[type="text"]::placeholder,
 .ai-response-table td input[type="datetime-local"]::placeholder,
 .ai-response-table td textarea::placeholder {
   color: #777; /* Placeholder text color */
+}
+
+.edit-button {
+  background-color: #7B1FA2; /* Dark purple background */
+  color: white;
+  padding: 8px 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #6A1B9A; /* Darker purple on hover */
 }

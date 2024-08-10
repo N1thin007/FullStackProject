@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { MdMic, MdMicOff } from 'react-icons/md'; // Import microphone icons
+import { MdMic, MdMicOff } from 'react-icons/md'; 
 import './AIScheduler.css';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import AppHeader from './AppHeader';
@@ -27,7 +27,8 @@ const predefinedInstruction = `
 
 const AIScheduler = () => {
   const [prompt, setPrompt] = useState('');
-  const [responses, setResponses] = useState([]); // Store multiple responses
+  const [responses, setResponses] = useState([]); 
+  const [isEditMode, setIsEditMode] = useState(false); 
   const navigate = useNavigate();
   const location = useLocation();
   const loggedInUser = localStorage.getItem('username');
@@ -123,7 +124,7 @@ const AIScheduler = () => {
           const events = parseResponseToEvents(responseText);
 
           if (events.length > 0) {
-            setResponses(events); // Store multiple responses
+            setResponses(events); 
           } else {
             alert('No valid events to display.');
           }
@@ -142,11 +143,11 @@ const AIScheduler = () => {
   };
 
   const handleDeclineAll = () => {
-    setResponses([]); 
-    setPrompt('');
+    setResponses([]);
+    setPrompt(''); 
     alert('All events have been declined.');
   };
-
+  
   const handleApproveAll = async () => {
     try {
       const calendarResponse = await fetch('http://localhost:8080/api/events/multiple', {
@@ -156,11 +157,11 @@ const AIScheduler = () => {
         },
         body: JSON.stringify(responses),
       });
-
+  
       if (calendarResponse.ok) {
         alert('All events added to calendar successfully.');
         setResponses([]); // Clear the responses after approval
-        setPrompt('');
+        setPrompt(''); // Reset the prompt textarea
       } else {
         alert('Failed to add events to calendar.');
       }
@@ -169,7 +170,6 @@ const AIScheduler = () => {
       alert('Failed to add events to calendar.');
     }
   };
-
   const handleMicClick = () => {
     if (listening) {
       SpeechRecognition.stopListening();
@@ -182,6 +182,10 @@ const AIScheduler = () => {
     const updatedResponses = [...responses];
     updatedResponses[index] = { ...updatedResponses[index], [field]: value };
     setResponses(updatedResponses);
+  };
+
+  const toggleEditMode = () => {
+    setIsEditMode(!isEditMode); // Toggle edit mode
   };
 
   if (!browserSupportsSpeechRecognition) {
@@ -213,6 +217,9 @@ const AIScheduler = () => {
           {responses.length > 0 && (
             <div className="ai-response">
               <h2>AI Responses</h2>
+              <button className="edit-button" onClick={toggleEditMode}>
+                {isEditMode ? 'Save' : 'Edit'}
+              </button>
               <table className="ai-response-table">
                 <thead>
                   <tr>
@@ -226,38 +233,55 @@ const AIScheduler = () => {
                   {responses.map((event, index) => (
                     <tr key={index}>
                       <td>
-                        <input
-                          type="text"
-                          value={event.title}
-                          onChange={(e) => handleInputChange(index, 'title', e.target.value)}
-                        />
+                        {isEditMode ? (
+                          <input
+                            type="text"
+                            value={event.title}
+                            onChange={(e) => handleInputChange(index, 'title', e.target.value)}
+                          />
+                        ) : (
+                          event.title
+                        )}
                       </td>
                       <td>
-                        <input
-                          type="datetime-local"
-                          value={event.start}
-                          onChange={(e) => handleInputChange(index, 'start', e.target.value)}
-                        />
+                        {isEditMode ? (
+                          <input
+                            type="datetime-local"
+                            value={event.start}
+                            onChange={(e) => handleInputChange(index, 'start', e.target.value)}
+                          />
+                        ) : (
+                          event.start
+                        )}
                       </td>
                       <td>
-                        <input
-                          type="datetime-local"
-                          value={event.end}
-                          onChange={(e) => handleInputChange(index, 'end', e.target.value)}
-                        />
+                        {isEditMode ? (
+                          <input
+                            type="datetime-local"
+                            value={event.end}
+                            onChange={(e) => handleInputChange(index, 'end', e.target.value)}
+                          />
+                        ) : (
+                          event.end
+                        )}
                       </td>
                       <td>
-                        <textarea
-                          value={event.description}
-                          onChange={(e) => handleInputChange(index, 'description', e.target.value)}
-                        />
+                        {isEditMode ? (
+                          <input
+                            type="text"
+                            value={event.description}
+                            onChange={(e) => handleInputChange(index, 'description', e.target.value)}
+                          />
+                        ) : (
+                          event.description
+                        )}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-              <button className="approve-all-button" onClick={handleApproveAll}>Approve All</button>
-              <button className="decline-all-button" onClick={handleDeclineAll}>Decline All</button>
+                <button className="decline-all-button" onClick={handleDeclineAll} style={{marginRight:'10px'}}>Decline All</button>
+                <button className="approve-all-button" onClick={handleApproveAll}>Approve All</button>
             </div>
           )}
         </div>

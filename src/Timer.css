@@ -219,3 +219,34 @@
     margin-top: 10px; /* Space above completed pomodoros */
     font-size: 18px; /* Adjust font size */
 }
+
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .music-button {
+    background-color: #ed3322;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .music-button:hover {
+    transform: scale(1.1);
+  }
+  

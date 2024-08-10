@@ -11,6 +11,7 @@ import Timer from './Timer';
 import AIScheduler from './AIScheduler';
 import AdminDashboard from './AdminDashboard';
 import HabitTracker from './HabitTracker';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -20,8 +21,7 @@ function App() {
         <Route path="/learn-more" element={<LearnMore />} />
         <Route path="/admindashboard" element={<AdminDashboard/>} />
         <Route path="/habit" element={<HabitTracker/>} />
-
-
+        <Route path="/setting" element={<Profile/>} />
 
         <Route 
           path="/dashboard" 

@@ -145,15 +145,15 @@ body, html {
   font-weight: 900; 
 }
 .chronoCraft-feature-card:nth-child(1) .chronoCraft-feature-card-content p {
-  color: #ff0000; 
+  color: #000000; 
 }
 
 .chronoCraft-feature-card:nth-child(2) .chronoCraft-feature-card-content p {
-  color: #0062ff;
+  color: #000000;
 }
 
 .chronoCraft-feature-card:nth-child(3) .chronoCraft-feature-card-content p {
-  color: #00ff22; 
+  color: #000000; 
 }
 
 .chronoCraft-feature-card.feature-card-1 .chronoCraft-feature-card-content p {
@@ -220,6 +220,11 @@ body, html {
   margin: 0 auto;
   text-align: left;
 }
+
+.chronoCraft-contact-container h2{
+  color:#000000
+}
+
 
 .chronoCraft-contact-section h2 {
   font-size: 2rem;

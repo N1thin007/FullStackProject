@@ -48,3 +48,93 @@
 .app-logout-btn:hover {
     background-color: #c82333;
 }
+
+/* Profile button styles */
+.app-profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.app-profile-btn {
+    background-color: #00adb5;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.app-profile-btn:hover {
+    background-color: #007a7a;
+}
+
+/* Dropdown menu styles */
+.app-profile-dropdown {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: dropdown 0.3s ease-out;
+}
+
+.app-profile-info p {
+    margin: 5px 0;
+}
+
+.app-profile-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-but{
+    background-color: #00adb5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.settings-but:hover {
+    background-color: #007a7a;
+}
+
+.log-app{
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.log-app:hover {
+    background-color: #bb2c2c;
+}
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
